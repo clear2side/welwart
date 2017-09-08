@@ -1,0 +1,63 @@
+.contacts
+	&__white
+		position: relative
+		@include flex(row, flex-start, flex-end, nowrap)
+		margin: 122px 100px
+
+	&__headline
+		font-family: $light
+		font-size: 35px
+		margin: 40px 0
+	&__container
+		position: absolute
+		right: 0
+		background-color: white
+		top: 50%
+		width: 500px !important
+		box-shadow: 0 0 30px rgba(black, 0.1)
+	&__block
+		@include flex(row, space-between, flex-start, nowrap)
+		padding: 30px 50px
+		border-bottom: 1px solid #e3e8eb
+	&__icon
+		width: 170px
+		color: #808489
+		font-family: $light
+		font-size: 14px
+		display: flex
+		align-items: center
+		&>img
+			margin-right: 5px
+	&__info
+		width: calc(100% - 170px)
+	&__line
+		@include flex(row, space-between, center, nowrap)
+		width: 100%
+		margin-bottom: 10px
+	&__desc	
+		color: #27333f
+		font-family: $light
+	&__content
+		color: #2d73ba
+		&_light
+			font-family: $light
+		&_big
+			font-size: 20px
+	&__map
+		height: 525px
+		width: 100%
+		background-color: black
+
+
+
+@media screen and (max-width: 1280px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 768px)
+	@import '_768.sass'
+
+@media screen and (max-width: 320px)
+	@import '_320.sass'

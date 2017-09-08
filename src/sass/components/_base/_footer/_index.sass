@@ -1,0 +1,90 @@
+.footer
+	background-color: #46525d
+	&__inner
+		@include flex(row, space-between, flex-start, nowrap)
+		margin: 20px auto 0
+		max-width: 1290px
+	&__column
+		@include flex(column, flex-start, flex-start, nowrap)
+		margin: 0 10px
+	&__copy
+		color: white
+		font-size: 14px
+	&__social
+		display: flex
+		margin-top: 20px
+	&__link
+		position: relative
+		color: white
+		text-decoration: none
+		font-family: $medium
+		font-size: 14px
+		margin-top: 11px
+		padding: 5px 10px
+		&:after
+			position: absolute
+			content: ''
+			height: 2px
+			width: 0
+			left: 0
+			bottom: 0
+			background: white
+		&:hover
+			&:after
+				display: block
+				width: 100%
+				transition: .15s ease
+
+		&:first-child
+			margin-top: 40px
+	&__contact
+		@include flex(row, space-between, flex-start, nowrap)
+	&__icon
+		margin-right: 15px
+	&__contact
+		margin-top: 20px
+		color: white
+		&:first-child
+			margin-top: 40px
+		&-line
+			&:not(:first-child)
+				margin-top: 8px
+	&__button
+		margin-top: 45px
+		align-self: flex-end
+	&__devs
+		margin-top: 20px
+		color: #afb3b6
+		&-link
+			color: white
+			text-decoration: none
+			margin-left: 5px
+
+.footer__social-icon
+	display: block
+
+.footer__social--list-item
+	height: 50px
+	width: 50px
+
+.footer__social--list-item:hover
+	padding: none
+	.footer__social-image
+		transform: scale(1.4)
+		transition: .15s ease
+
+.footer__column--menu
+	margin: 0 !important
+
+
+@media screen and (max-width: 1280px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 768px)
+	@import '_768.sass'
+
+@media screen and (max-width: 320px)
+	@import '_320.sass'

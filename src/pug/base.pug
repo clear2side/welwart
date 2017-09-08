@@ -1,0 +1,134 @@
+doctype html
+html(lang="ru")
+	head
+		title Welvart
+		meta(charset='utf-8')
+		meta(name='keywords')
+		meta(name='description')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
+		link(rel='stylesheet' href='css/main.css')
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_-fZhgOgEznL6N2NGE4VySEsYiErRHEQ&amp;callback=initMap" defer="")
+		script(type='text/javascript' src='js/jquery-3.1.0.min.js')
+		script(type='text/javascript' src='js/main.min.js')
+		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+		link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
+		link(rel='apple-touch-icon', href='/icons/apple-icon-57.png')
+		link(rel='apple-touch-icon', sizes='76x76', href='/icons/apple-icon-76.png')
+		link(rel='apple-touch-icon', sizes='120x120', href='/icons/apple-icon-120.png')
+		link(rel='apple-touch-icon', sizes='152x152', href='/icons/apple-icon-152.png')
+		link(rel='apple-touch-icon', sizes='180x180', href='/icons/apple-icon-180.png')
+		link(rel='icon', sizes='192x192', href='/icons/icon-192.png')
+		link(rel='icon', sizes='128x128', href='/icons/icon-128.png')
+	body
+		.modal#modalOrder
+			.modal__close-layer.modalClose
+			.modal__main-layer
+				.modal__body
+					.modal__head
+						.modal__name Заказать товар
+						.modal__close.modalClose: i.fa.fa-close
+					form.modal__form
+						input.modal__input(type="text" name="name" placeholder="Имя (только буквы)" pattern="^[A-Za-zА-Яа-я]{1,25}$" title="Имя должно содержать только буквы" required)
+						input.modal__input(type="email" name="email" placeholder="Введите ваш e-mail")
+						input.modal__input(type="tel" name="phone" placeholder="Телефон (минимум 7 цифр)" minlength="7" maxlength="13" title="телефон состоит из цифр, минимум 7 знаков" pattern="^[ 0-9]+$" required)
+						textarea.modal__textarea(type='text' name='comment' placeholder='Комментарий')
+						input.modal__submit(type='submit' value='Заказать')
+		.modal#modalCall
+			.modal__close-layer.modalClose
+			.modal__main-layer
+				.modal__body
+					.modal__head
+						.modal__name Заказать звонок
+						.modal__close.modalClose: i.fa.fa-close
+					form.modal__form
+						input.modal__input(type="text" name="name" placeholder="Имя (только буквы)" pattern="^[A-Za-zА-Яа-я]{1,25}$" title="Имя должно содержать только буквы" required)
+						input.modal__input(type="tel" name="phone" placeholder="Телефон (минимум 7 цифр)" minlength="7" maxlength="13" title="телефон состоит из цифр, минимум 7 знаков" pattern="^[ 0-9]+$" required)
+						input.modal__submit(type='submit' value='Перезвонить мне')
+		.mobile
+			.mobile__nav
+				.mobile__links
+					a(href='/about.html').mobile__link О Компании
+					.mobile__link.mobile__link--menu
+						a(href='/catalog.html').mobile__link--title Продукция
+						button.nav__link_parent--tablet_button
+							svg.nav__link_parent--tablet_svg
+								polyline(points="0 0,6 6, 12 0" style='fill:none; stroke:#2D73BA; stroke-width:2')
+						.nav__submenu
+							a.nav__sublink(href='#') Link1
+							a.nav__sublink(href='#') Link2
+							a.nav__sublink(href='#') Link3
+							a.nav__sublink(href='#') Link4
+					a(href='/news.html').mobile__link Новости
+					a(href='/contacts.html').mobile__link Контакты
+			.mobile__contact
+				.nav__contacts.mobile__contacts
+					.mobile__text.nav__text.nav__text_mail info@welvart.com
+					.mobile__text.nav__text.nav__text_phone 38 (044) 
+						.nav__text_bold 221-48-38
+				button.nav__button(activator='modalCall') Заказать звонок
+		nav.nav
+			.nav__inner.inner
+				.nav__nav.nav__left
+					a(href='/'): img(src='images/logo.png').nav__logo
+				.nav__right
+					.nat__top
+						.nav__contact
+							.nav__contacts
+								.nav__text.nav__text_mail info@welvart.com
+								.nav__text.nav__text_phone 38 (044) 
+									.nav__text_bold 221-48-38
+					.nav__bottom
+						.nav__links
+							a.nav__link(href='/about.html') О Компании
+							a.nav__link.nav__link_parent(href='/catalog.html') Продукция
+							.nav__submenu
+								a.nav__sublink(href='#') Link1
+								a.nav__sublink(href='#') Link2
+								a.nav__sublink(href='#') Link3
+								a.nav__sublink(href='#') Link4
+							a.nav__link(href='/news.html') Новости
+							a.nav__link(href='/contacts.html') Контакты
+						button.nav__button(activator='modalCall') Заказать звонок
+				.nav__burger.burger
+					.burger__line
+					.burger__line
+					.burger__line
+		block main
+		footer.footer
+			.footer__inner.inner
+				.footer__column
+					img.footer__image(src='images/logo.png')
+					.footer__copy 2017. Изготовление влажных салфеток
+					ul.footer__social
+						li.footer__social--list-item
+							a(href='#').footer__social-icon: img.footer__social-image(src='images/vk.png')
+						li.footer__social--list-item
+							a(href='#').footer__social-icon: img.footer__social-image(src='images/fb.png')
+						li.footer__social--list-item
+							a(href='#').footer__social-icon: img.footer__social-image(src='images/twitter.png')
+				.footer__column.footer__column--menu
+					a(href='/about.html').footer__link О Компании
+					a(href='#').footer__link Продукция
+					a(href='#').footer__link Новости
+					a(href='#').footer__link Контакты
+				.footer__column
+					.footer__contact
+						.footer__icon: img(src='images/botphone.png')
+						.footer__info
+							.footer__contact-line тел.: (044) 221-48-38
+							.footer__contact-line моб.: (050) 065-34-15
+					.footer__contact
+						.footer__icon: img(src='images/botmail.png')
+						.footer__info
+							.footer__contact-line info@welvart.com
+				.footer__column
+					.footer__contact
+						.footer__icon: img(src='images/botmarker.png')
+						.footer__info
+							.footer__contact-line Украина, г. Киев,
+							.footer__contact-line ул. ХХХХХХХ ХХХХ ХХ, ХХХ
+				.footer__column
+					button.nav__button.footer__button(activator='modalCall') Заказать звонок
+					.footer__devs разработка:
+						a(href='#').footer__devs-link STEARLING.NET

@@ -1,0 +1,159 @@
+extends base.pug
+
+block main
+	header.header.header__main--slider
+		.header__inner.inner
+			.header__slider.slider
+				.header__arrow.left.slider__nav <
+				.header__container.slider__container
+					.header__move.slider__inner
+						.header__slide.slider__slide
+							.slider__slide--rama
+								.header__line
+								.header__line
+								.header__line
+								.header__line
+								.header__line
+								.header__caption Предложение сезона:
+								.header__content Фасовка сахара и соли в стики <br>с 
+									span.header__text_bold 30% скидкой
+						.header__slide.slider__slide
+							.slider__slide--rama
+								.header__line
+								.header__line
+								.header__line
+								.header__line
+								.header__line
+								.header__caption Предложение сезона:
+								.header__content Фасовка сахара и соли в стики <br>с 
+									span.header__text_bold 30% скидкой
+						.header__slide.slider__slide
+							.slider__slide--rama
+								.header__line
+								.header__line
+								.header__line
+								.header__line
+								.header__line
+								.header__caption Предложение сезона:
+								.header__content Фасовка сахара и соли в стики <br>с 
+									span.header__text_bold 30% скидкой
+				.header__arrow.right.slider__nav >
+			.header__pagination.slider__pagination
+				.header__paginationItem.slider__paginationItem.active
+				.header__paginationItem.slider__paginationItem
+				.header__paginationItem.slider__paginationItem
+			.header__down: img.header__arrImage(src='images/headerArrow.png')
+	.products
+		.products__inner.inner
+			.products__header
+				.products__headline Мы производим
+				.products__nav
+					a(href='#').products__nav-item.active Влажные салфетки
+					a(href='#').products__nav-item Порционная упаковка
+					a(href='#').products__nav-item Бумажные стаканчики
+			.products__line
+				a(href='#').products__item.products__item_before
+					.products__border
+					.products__border
+					.products__border
+					.products__border
+					.products__container
+						img.products__image.products__image_margin(src='images/can.png')
+						.products__info
+							.products__caption 
+								span.products__caption_bold Б
+								| умажные стаканчики
+							.products__text.products__text_max.
+								Производство для отелей, ресторанов, баров и кафе
+				.products__count.products__count_before 01
+			.products__line.products__line_reverse
+				a(href='#').products__item
+					.products__container.products__container_column
+						img.products__image.products__image_under(src='images/paketik.png')
+						.products__info
+							.products__caption 
+								span.products__caption_bold П
+								| орционная упаковка
+							.products__text.
+								Фасовка сахара, соли, перца, васаби, шампуней, жидкого мыла и тд.
+				.products__count.products__count_after 02
+			.products__line
+				a(href='#').products__item.products__item_before.products__item_big
+					.products__container
+						img.products__image.products__image_biggermarg(src='images/wipes.png')
+						.products__triangle.triangle
+							.triangle__line
+							.triangle__line
+							.triangle__line
+						.products__info
+							.products__caption 
+								span.products__caption_bold В
+								| лажные салфетки
+							.products__text.
+								9 видов салфеток в индивидуальной упаковке
+				.products__count.products__count_before 03
+	.partners
+		.partners__inner.inner
+			.partners__line
+			.partners__line
+			.partners__line
+			.partners__line
+			.partners__line
+			.partners__caption С кем мы работаем:
+			ul.partners__container
+				li.partners__item
+					img.partners__image(src='images/icon01.png')
+					.partners__name Кафе, бары, рестораны
+				li.partners__item
+					img.partners__image(src='images/icon02.png')
+					.partners__name Кинотеатры
+				li.partners__item
+					img.partners__image(src='images/icon03.png')
+					.partners__name Отели и гостиницы
+				li.partners__item
+					img.partners__image(src='images/icon04.png')
+					.partners__name Салоны красоты, SPA
+	.about
+		.about__inner.inner
+			.about__desc
+				.about__headline О компании:
+				.about__slide.active
+					.about__caption
+						span.about__caption_bold Л
+						| учшие фасовочно-упаковочное оборудование в Украине
+					.about__text.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				.about__slide
+					.about__caption
+						span.about__caption_bold Х
+						| удшие фасовочно-упаковочное оборудование в Украине
+					.about__text.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				.about__slide
+					.about__caption
+						span.about__caption_bold П
+						| учшие фасовочно-упаковочное оборудование в Украине
+					.about__text.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				.about__pagination
+					.about__paginationItem.active
+					.about__paginationItem
+					.about__paginationItem
+			img.about__image.active(src='images/factory.png')
+			img.about__image(src='images/factory.png')
+			img.about__image(src='images/factory.png')

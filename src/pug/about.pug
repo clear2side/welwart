@@ -1,0 +1,130 @@
+extends base.pug
+
+block main
+  .about__page
+    .block__about--info
+      .news__inner.inner
+        .news__breadcrumbs.breadcrumbs
+          a(href='#').breadcrumbs__item Главная
+          a(href='#').breadcrumbs__item.current Новости
+      .container
+        .about__info--common
+          .about__info--title.
+            ООО “Эко-Велварт” – работает на рынке фасовки и упаковки различных видов продукции с 2010 года.
+          p.about__info--text.
+            Предприятие обладающее всем спектром оборудования для изготовления продукции: от печати упаковочного материала до упаковки продукта. Производственная база предприятия позволяет производить и фасовать любые виды товара в кратчайшие сроки при минимальных затратах.
+          p.about__info--text.
+            Фасовка(упаковка) различных продуктов (штучных, гранулированных,сыпучих, трудно-сыпучих, жидких, пастообразных, гелеобразных) в любые виды упаковочных материалов.
+          p.about__info--text.
+            Упаковка в пакеты саше, стаканы, стик . Контрактное производство нашей кампании позволяет изготовление продукции на мощностях предприятия, которое обеспечивает полное соблюдение технологического цикла и контроль качества готовой продукции в соответствии с требованиями заказчика.
+          .about__info--quotes
+            .about__info--quotes_ico
+              img(src="./images/quotes.png", alt="quotes")
+            .about__info--quotes_text
+              span Все в одном месте, все логично. 
+              span Вам выгодно, удобно и экономно!
+
+        .about__info--contract 
+          .about__info--title.
+            Контактное производство
+          p.about__info--text.
+            Контрактное производство подразумевает выпуск продукции под вашим брендом из собственного или давальческого сырья, зачастую без упоминания конкретного производителя.
+            <br>
+            Мы готовы не почивать на лаврах вашего успеха, просто мы любим свое производство и для нас это творческий процесс!
+          .about__info--services
+            .about__info--services_left
+              .about__info--services_title Список услуг
+              ul.about__info--services_list
+                li.about__info--services_item &mdash; Порционная продукция
+                li.about__info--services_item &mdash; Бумажные стаканчики
+                li.about__info--services_item &mdash; Влажные салфетки 
+                li.about__info--services_item &mdash; Предметы бортового сервиса 
+                li.about__info--services_item &mdash; Предметы индивидуального пользования
+            .about__info--services_right
+              .about__info--services_img
+                img(src="./images/coffe-cup.png", alt="coffe-cup")
+
+        .about__info--work-types
+          .about__info--title Этапы работы
+          p.about__info--text.
+            <b>Первый этап</b> – это производство упаковочного материала с нанесением флексографической печати логотипа заказчика. Он включает в себя работы по подготовке, технической верстке дизайн-макета, изготовления печатных фотополимерных форм, резке исходного упаковочного материала и, непосредственно, самой флексографической печати.
+          p.about__info--text.
+            <b>Второй этап</b> – основной производственный процесс, состоящий в зависимости от выполняемых работ из нескольких составляющих:
+          ul.about__info--work-types_list
+            li.about__info--work-types_item.
+              &mdash; Смешивание. Подобная услуга необходима тогда, когда продукт в дальнейшем подвергаемый фасовке - является многокомпонентным.
+            li.about__info--work-types_item.
+              &mdash; Согласно заявленной рецептуре производится смешивание непосредственно перед фасовкой для предотвращения межфракционного расслоения компонентов при транспортировке.
+            li.about__info--work-types_item.
+              &mdash; Фасовка (упаковка) –  непосредственно процесс упаковывания продукта в пакет. Продукты могут быть: гранулированные, сыпучие, трудно-сыпучие, пылящие, жидкие, пастообразные, гелеобразные и штучные.
+            li.about__info--work-types_item &mdash; Для различных категорий фасуемой, упаковываемой продукции существуют раздичные устройства дозирования:
+              ul.about__info--work-types_categories-list
+                li.about__info--work-types_categories-item - Обьемные;
+                li.about__info--work-types_categories-item - Шнековые;
+                li.about__info--work-types_categories-item - Жидкостные;
+                li.about__info--work-types_categories-item - Штучные дозаторы.
+          p.about__info--text.
+            Они и осуществляют на автоматических линиях дозирование продукта в пакет-саше,стакан, стик.
+    
+    .block__about--services
+      .container
+        .about__services--title работая с нами вы:
+        ul.about__services--list
+          li.about__services--item
+            .about__services--inner_block
+              .about__services--inner_little-dot
+              .about__services--inner_dot
+              .about__services--inner_line
+              .about__services--inner_content
+                .about__services--inner_title Всегда будете услышаны
+                p.about__services--inner_text.
+                  Ведь наша главная задача понять, что необходимо именно Вам!
+          li.about__services--item
+            .about__services--inner_block
+              .about__services--inner_dot
+              .about__services--inner_line
+              .about__services--inner_content
+                .about__services--inner_title.
+                  Индувидуальный подход
+                p.about__services--inner_text.
+                  Делаем только то , что используем сами. Контроль качества продукции на каждом этапе.
+          li.about__services--item
+            .about__services--inner_block
+              .about__services--inner_dot
+              .about__services--inner_line
+              .about__services--inner_content
+                .about__services--inner_title.
+                  Профессиональные <br> менеджеры
+                p.about__services--inner_text.
+                  Мы действуем не шаблонно, по этому у нас большой опыт.
+          li.about__services--item
+            .about__services--inner_block
+              .about__services--inner_dot
+              .about__services--inner_line
+              .about__services--inner_content
+                .about__services--inner_title.
+                  Гарантия качества
+                p.about__services--inner_text.
+                  Главное всегда качество. По этому Вы можете быть уверены, что высокое качество за приемлемую цену – наше кредо!
+          li.about__services--item
+            .about__services--inner_block
+              .about__services--inner_dot
+              .about__services--inner_line
+              .about__services--inner_content
+                .about__services--inner_title.
+                  Оптимальные решения
+                p.about__services--inner_text.
+                  Под Ваши цели и бюджет, мы подберем наиоптимальнейшее решение, без лишней переплаты и потери времени.
+    
+    .block__about--questions
+      .container
+        .about__info--title.
+          На все интересующие Вас вопросы:
+        ul.about__questions--list
+          li.about__questions--item &mdash; С каким количеством в партии вы работаете?
+          li.about__questions--item &mdash; Что конкретно Вы можете сделать?
+          li.about__questions--item &mdash; Сколько времени необходимо на производство?
+          li.about__questions--item &mdash; Стоимость изделия?
+          li.about__questions--item &mdash; Что входит в стоимость?
+          li.about__questions--item &mdash; Что делать, если я не знаю, что точно мне необходимо?
+        .about__questions--usage Обращайтесь к нам, мы всегда будем рады Вам помочь!

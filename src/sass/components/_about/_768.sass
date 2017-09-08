@@ -1,0 +1,60 @@
+.block__about--info .container,
+.block__about--questions .container 
+  margin: 0 60px
+
+.block__about--services .container
+  width: 100%
+
+.about__page
+  p,li
+    font-size: 14px
+  span
+    font-size: 16px
+
+.about__info--title
+  font-size: 24px
+
+.about__info--services
+  flex-direction: column
+
+.about__info--services_left,
+.about__info--services_right 
+  width: 100%
+  text-align: center
+
+.about__info--services_left
+  margin-bottom: 20px
+
+.about__info--services_img
+  margin: auto
+
+.about__services--inner_block
+  width: 416px
+
+.about__services--item
+  &:nth-child(odd)
+    text-align: left
+  &:nth-child(even)
+    .about__services--inner_dot
+      right: 0
+      transform: translateX(56%)
+    .about__services--inner_block
+      border-left: 2px solid #2d73ba
+      border-right: none
+    .about__services--inner_line
+      right: 0
+    .about__services--inner_dot,
+    .about__services--inner_line
+      left: 0
+    .about__services--inner_dot,
+      transform: translateX(-58%)
+
+.about__services--inner_line
+  width: 90px
+.about__services--inner_content
+  margin-left: 100px
+  text-align: left !important
+
+.about__services--list
+  padding-left: 30px
+

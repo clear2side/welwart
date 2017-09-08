@@ -1,0 +1,85 @@
+.news
+	margin-top: 122px
+	&__list
+		margin: 0 auto
+		width: 82%
+	&__item
+		@include flex(row, center, stretch, nowrap)
+		margin-bottom: 50px
+	&__image
+		margin-right: 30px
+		width: 35%
+		object-fit: cover
+	&__info
+		@include flex(column, space-around, stretch, nowrap)
+		width: 65%
+	&__caption
+		font-family: $light
+		font-size: 35px
+		color: #27333f
+		margin-top: 10px
+	&__text
+		font-family: $light
+		color: #27333f
+		font-size: 18px
+		margin: 30px 0
+	&__about
+		@include flex(row, space-between, center, nowrap)
+		margin-bottom: 20px
+	&__more
+		color: #2d73ba
+		text-transform: uppercase
+		text-decoration: none
+		font-family: $medium
+		font-size: 14px
+		&:hover
+			color: #5a92c7
+		&::after
+			content: '>'
+			display: inline
+			font-size: 18px
+			margin-left: 5px
+	&__pagination
+		margin: 50px auto
+		@include flex(row, center, center, nowrap)
+		&-item
+			display: inline-block
+			width: 45px
+			height: 45px
+			color: #27333f
+			border: 1px solid transparent
+			text-decoration: none
+			transition: all 500ms
+			@include flex(row, center, center, nowrap)
+			margin: 0 2px
+			&.active, &:hover
+				border-color: #2d73ba
+				color: #2d73ba
+
+.news__pagination--list
+	display: block
+	margin: 0 auto
+
+.news__pagination--list_item
+	display: inline-block
+
+.news__pagination--arr_left
+	left: 0
+
+.news__pagination--arr_right
+	right: 0
+
+@media screen and (max-width: 1280px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 768px)
+	@import '_768.sass'
+
+@media screen and (max-width: 480px)
+	@import '_480.sass'
+	.news__pagination-item
+		height: 20px
+		width: 20px

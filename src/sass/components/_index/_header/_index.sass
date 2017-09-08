@@ -1,0 +1,170 @@
+.header
+	width: 100%
+	margin-top: 111px
+	height: calc(100vh - 111px);
+	position: relative
+	z-index: 0
+	&__image 
+		width: 100%
+		position: absolute
+		left: 0
+		z-index: 1
+		filter: brightness(50%)
+		
+	&__inner
+		height: 100%
+		@include flex(column, none, center, nowrap)
+		margin: 0 auto
+		&.inner
+			width: 100%
+			max-width: none
+	&__slider
+		height: 100%
+		width: 100%
+		@include flex(row, space-between, center, nowrap)
+	&__container
+		height: 100%
+		width: 100%
+		overflow: hidden
+	&__move
+		height: 100%
+	&__slide
+		height: 100%
+		width: 100%
+		position: relative
+		padding: 4px
+		@include flex(column, flex-start, center, nowrap)
+		display: inline-flex
+		margin-left: 0px
+		white-space: normal
+		background-size: cover
+		&:nth-child(1)
+			background-image: url('../images/sliderBackground1.png')
+		&:nth-child(2)
+			background-image: url('../images/sliderBackground2.png')
+		&:nth-child(3)
+			background-image: url('../images/sliderBackground3.png')
+	&__line
+		position: absolute
+		background-color: white
+		&:nth-child(1)
+			top: 0
+			left: 0
+			width: 30%
+			height: 4px
+		&:nth-child(2)
+			top: 0
+			left: 0
+			height: 100%
+			width: 4px
+		&:nth-child(3)
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 4px
+		&:nth-child(4)
+			bottom: 0
+			right: 0
+			height: 100%
+			width: 4px
+		&:nth-child(5)
+			top: 0
+			right: 0
+			width: 30%
+			height: 4px
+	&__arrow
+		position: absolute
+		color: white
+		font-size: 40px
+		border: 2px solid white
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		padding-bottom: 10px
+		@include flex(row, center, center, nowrap)
+		z-index: 1
+		&.left
+			left: 0
+		&.right
+			right: 0
+			
+	&__caption
+		margin: -20px auto 5px
+		color: white
+		text-transform: uppercase
+		font-family: $light
+		font-size: 25px
+		max-width: 40%
+		text-align: center
+	&__content
+		color: white
+		font-family: $light
+		font-size: 55px
+		text-align: center
+	&__text
+		&_bold
+			font-family: $medium
+	&__pagination
+		position: absolute
+		bottom: 100px
+		left: calc(50% - 57px)
+		display: flex
+	&__paginationItem
+		width: 18px
+		height: 18px
+		border: 1px solid white
+		border-radius: 50%
+		position: relative
+		margin: 0 10px
+		&::after
+			content: ''
+			display: inline-block
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			position: absolute
+			top: 3px
+			left: 3px
+		&.active
+			&::after
+				background-color: white
+	&__down
+		position: absolute
+		bottom: 40px
+		left: calc(50% - 11px)
+		cursor: pointer
+		padding: 20px
+		margin: -20px
+		&:hover
+			animation: moveArr 2s infinite;
+	&__arrImage
+		width: 22px
+.header__main--slider_img-item
+	display: block
+	.active
+		display: block
+
+.slider__slide--rama
+	position: relative
+	width: 60%
+	margin-top: 140px
+
+@keyframes moveArr 
+	0% 
+		transform: translateY(0%)
+	50%
+		transform: translateY(50%)
+	100%
+		transform: translateY(0%)
+
+@media screen and (max-width: 1280px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 768px)
+	@import '_768.sass'
+
+@media screen and (max-width: 320px)
+	@import '_320.sass'

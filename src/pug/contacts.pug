@@ -1,0 +1,53 @@
+extends base.pug
+
+block main
+	.contacts
+		.contacts__inner.inner
+			.contacts__white
+				.contacts__headline Наши контакты
+				.contacts__container
+					.contacts__block
+						.contacts__icon 
+							img(src='images/contmark.png')
+							| Адресс
+						.contacts__info
+							.contacts__line
+								.contacts__content.contacts__content_light.contacts__content_big Украина, г. Киев
+							.contacts__line
+								.contacts__content.contacts__content_light.contacts__content_big ХХХХХХХ ХХХ ХХХХХХ
+					.contacts__block
+						.contacts__icon 
+							img(src='images/conttime.png')
+							| Режим работы
+						.contacts__info
+							.contacts__line
+								.contacts__desc ПН-ПТ:
+								.contacts__content 8:00 - 19:00
+							.contacts__line
+								.contacts__desc СБ:
+								.contacts__content 9:00 - 14:00
+							.contacts__line
+								.contacts__desc ВС:
+								.contacts__content.contacts__content_light выходной
+					.contacts__block
+						.contacts__icon 
+							img(src='images/contphone.png')
+							| Телефоны
+						.contacts__info
+							.contacts__line
+								.contacts__desc городской
+								.contacts__content (044) 221 48 38
+							.contacts__line
+								.contacts__desc моб.
+								.contacts__content (050) 065 34 15
+							.contacts__line
+								.contacts__desc моб.
+								.contacts__content (050) 065 34 15
+							.contacts__line
+								.contacts__desc моб.
+								.contacts__content (050) 065 34 15
+							.contacts__line
+								.contacts__desc моб.
+								.contacts__content (050) 065 34 15
+		.contacts__map#map
+			//- img(src="./images/map.png", alt="map")

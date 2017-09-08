@@ -1,0 +1,71 @@
+.about
+	margin: 115px 0 160px
+	&__inner
+		@include flex(row, space-between, center, nowrap)
+		max-width: 1100px
+	&__headline
+		font-family: $light
+		font-size: 23px
+		text-transform: uppercase
+		color: #27333f
+		margin-bottom: 20px
+	&__slide
+		@include flex(column, flex-start, flex-start, nowrap)
+		display: none
+		max-width: 600px
+		&.active
+			display: flex
+	&__caption
+		font-family: $light
+		font-size: 35px
+		line-height: 1
+		color: #27333f
+		&_bold
+			font-family: $bold
+			font-size: 65px
+	&__text
+		margin-top: 30px
+		font-family: $light
+		color: #27333f
+		font-size: 18px
+	&__pagination
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 65px 0 0
+	&__paginationItem
+		width: 18px
+		height: 18px
+		border: 1px solid black
+		border-radius: 50%
+		position: relative
+		margin: 0 10px
+		cursor: pointer
+		&::after
+			content: ''
+			display: inline-block
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			position: absolute
+			top: 3px
+			left: 3px
+		&.active
+			&::after
+				background-color: black
+	&__image
+		display: none
+		&.active
+			display: block
+
+@media screen and (max-width: 1280px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 768px)
+	@import '_768.sass'
+
+@media screen and (max-width: 320px)
+	@import '_320.sass'

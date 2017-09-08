@@ -1,0 +1,127 @@
+.nav
+	width: 100%
+	padding: 10px 0
+	background-color: white
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 5
+	box-shadow: 0 0 20px rgba(black, 0.1)
+	&__inner
+		@include flex(row, space-between, stretch, nowrap)
+		margin: 0 auto
+		position: relative
+	&__nav
+		@include flex(row, flex-start, flex-end, nowrap)
+	&__link
+		margin-right: 32px
+		text-decoration: none
+		font-family: $medium
+		color: #2d73ba
+		&:hover
+			padding: 10px 0
+			border-bottom: 2px solid #2d73ba
+			transition: .15s ease
+		&:nth-child(2)
+			margin-right: 26px
+		&_parent
+			&::after
+				content: '>'
+				display: inline-block
+				transform: rotate(90deg) translateX(2px)
+				margin: 0 0 0 9px
+		& + .nav__submenu
+			@include flex(column, flex-start, flex-start, nowrap)
+			position: absolute
+			left: 330px
+			top: 90px
+			max-height: 0px
+			overflow: hidden
+			transition: all 500ms
+			background-color: white
+			min-width: 130px
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1) 
+		&:hover + .nav__submenu, & + .nav__submenu:hover
+			max-height: 500px
+			padding: 0 15px 15px 15px
+	&__sublink
+		text-decoration: none
+		font-family: $medium
+		color: #2d73ba
+		padding: 10px 20px
+	
+	&__contact
+		@include flex(column, flex-start, flex-end, nowrap)
+		margin-right: 15px
+	&__contacts
+		@include flex(row, flex-start, center, nowrap)
+		margin-top: 5px
+	&__text
+		font-family: $light
+		font-size: 14px
+		margin-right: 8px
+		color: #274f78
+		&_mail
+			letter-spacing: 0.2px
+			&::before
+				content: url('../images/mail.png')
+		&_phone
+			&::before
+				content: url('../images/phone.png')
+		&_mail, &_phone
+			&::before
+				margin: 0 8px 0 0
+		&:first-child
+			padding-right: 20px
+			border-right: 1px solid #dae1e5
+		&:last-child
+			margin-left: 12px
+		&_bold
+			display: inline-block
+			font-family: $bold
+			font-size: 18px
+	&__button
+		width: 180px
+		height: 47px
+		border: none
+		color: white
+		background-color: #2d73ba
+		font-size: 14px
+		font-family: $medium
+		border-radius: 3px
+		cursor: pointer
+		&:hover
+			background-color: #5a92c7
+			
+	&__burger
+		align-self: center
+		display: none
+
+.nav__right
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	width: calc(100% - 260px)
+
+.nav__bottom
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.nav__link_parent--tablet_button
+	display: none
+
+.nav__link.nav__link_parent
+	border-bottom: 0
+
+@media screen and (max-width: 1280px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 768px)
+	@import '_768.sass'
+
+@media screen and (max-width: 320px)
+	@import '_320.sass'

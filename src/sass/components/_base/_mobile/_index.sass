@@ -1,0 +1,38 @@
+.mobile
+	position: fixed
+	top: -100vh
+	right: 0
+	left: 0
+	height: 100vh
+	background-color: white
+	z-index: 4
+	padding: 120px 2.5% 50px
+	overflow-y: auto
+	&__links
+		@include flex(column, flex-start, center, nowrap)
+	&__link
+		margin: 10px
+		text-decoration: none
+		font-family: $medium
+		color: #2d73ba
+	&__contact
+		margin-top: 40px
+		@include flex(column, center, center, nowrap)
+	&__contacts
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+	&__text
+		margin-bottom: 10px
+
+@media screen and (max-width: 1280px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 768px)
+	@import '_768.sass'
+
+@media screen and (max-width: 320px)
+	@import '_320.sass'

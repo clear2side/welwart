@@ -1,0 +1,215 @@
+.about__page 
+  margin-top: 122px
+  .container 
+    margin: auto
+    font-family: 'Roboto'
+    font-weight: 300
+    font-size: 18px
+
+.block__about--info .container,
+.block__about--questions .container 
+  max-width: 1051px
+  min-width: 230px
+
+.block__about--services .container
+  width: 830px
+
+.about__info--common,
+.about__info--contract,
+.about__info--work-types 
+  margin-bottom: 115px
+
+.about__info--common 
+  margin-top: 50px
+  .about__info--title 
+    margin-top: 55px
+  
+.about__info--title 
+  font-size: 36px
+  margin-bottom: 35px
+
+.about__info--text,
+.about__info--quotes_text 
+  font-size: 18px
+
+.info__bread-crumps--item 
+  display: inline-block
+
+.about__info--text 
+  margin-bottom: 30px
+  line-height: 1.4
+  &:last-child 
+    margin-bottom: 0
+  
+.about__info--quotes_text 
+  font-style: italic
+  display: block
+  font-size: 24px
+  font-weight: normal
+  span 
+    display: block
+  
+.about__info--services 
+  font-size: 24px
+
+.about__info--services_list 
+  margin-top: 25px
+  font-size: 18px
+
+.about__info--services_item 
+  margin-bottom: 15px
+
+.about__info--quotes 
+  @extend %clearfix
+
+.about__info--quotes_ico 
+  height: 35px
+  width: 37px
+  float: left
+
+.about__info--quotes_text 
+  padding-top: 13px
+  margin-left: 57px
+
+.about__info--services 
+  @extend %clearfix
+
+.about__info--services_left,
+.about__info--services_right 
+  width: 50%
+
+.about__info--services_list 
+
+.about__info--services_img 
+  max-width: 500px
+  min-width: 200px
+  img
+    width: 100%
+    
+
+.about__info--work-types 
+  p:nth-child(3) 
+    margin-bottom: 10px
+  
+.about__info--work-types_item 
+  padding-left: 10px
+
+.about__info--work-types_item 
+  line-height: 1.6
+
+.about__info--services
+  display: flex
+  align-items: center
+
+.block__about--services 
+  background-image: url(../images/services.png)
+  background-size: cover
+  color: white
+  padding: 50px 0
+  
+.about__services--title 
+  text-align: center
+  text-transform: uppercase
+  font-size: 24px
+  margin: 0 auto 64px
+
+.about__services--list
+  position: relative
+
+.about__services--item
+  display: block
+  position: relative
+  &:nth-child(odd)
+    text-align: right
+    .about__services--inner_dot
+      left: 0
+      transform: translateX(-58%)
+    .about__services--inner_content
+      text-align: right
+    .about__services--inner_block
+      border-left: 2px solid #2d73ba
+    .about__services--inner_line
+      left: 0
+
+  &:nth-child(even)
+    text-align: left
+    .about__services--inner_dot
+      right: 0
+      transform: translateX(56%)
+    .about__services--inner_content
+      text-align: left
+    .about__services--inner_block
+      border-right: 2px solid #2d73ba
+    .about__services--inner_line
+      right: 0
+  &:last-child
+    margin-bottom: 0
+  
+.about__services--inner_block
+  display: inline-block
+  position: relative
+  padding: 40px 0
+  width: 416px
+
+.about__services--inner_title
+  font-size: 24px
+  margin-bottom: 25px
+  &::first-letter
+    font-weight: bold
+
+.about__services--inner_line
+  position: absolute
+  background: #2d73ba
+  height: 1px
+  width: 125px
+  transform: translateY(12px)
+  z-index: 1
+
+.about__services--inner_dot
+  position: absolute
+  background: #2d73ba
+  height: 12px
+  width: 12px
+  border-radius: 12px
+  margin-top: 7px
+  z-index: 2
+
+.about__services--inner_little-dot
+  position: absolute
+  background: #2d73ba
+  top: 0
+  height: 8px
+  width: 8px
+  border-radius: 8px
+  z-index: 2
+  transform: translateX(-61%)  
+
+.about__services--inner_content
+  display: inline-block
+  width: 290px
+  
+.block__about--questions 
+  padding-top: 85px
+  padding-bottom: 180px 
+
+.about__questions--title
+  margin-bottom: 35px
+  font-size: 36px
+
+.about__questions--item
+  margin-bottom: 20px
+
+.about__questions--usage
+  margin-top: 35px
+
+@media screen and (max-width: 1280px) 
+	@import '_1280.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 768px)
+	@import '_768.sass'
+
+@media screen and (max-width: 480px)
+	@import '_480.sass'

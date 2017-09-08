@@ -1,0 +1,39 @@
+.nav
+	&__burger
+		display: flex
+	&__right
+		display: none
+	&__link
+		&:hover + .nav__submenu, & + .nav__submenu:hover
+			max-height: 0px
+
+.nav__link_parent--tablet_svg
+	height: 8px
+	width: 12px
+	transform: rotate(-90deg)
+
+.nav__link_parent--tablet_button
+	display: inline-block
+	margin-left: 20px
+	height: 30px
+	width: 30px
+	border-radius: 3px
+	border: 2px solid rgba(#2D73BA, .5)
+	&.active .nav__link_parent--tablet_svg
+		transform: rotate(0deg)
+		
+
+
+	
+
+
+.mobile__link--title
+	color: #2D73BA
+
+.mobile__link--menu
+	margin-left: 60px !important
+	.nav__sublink
+		display: block
+		padding: 8px
+	.nav__submenu
+		display: none

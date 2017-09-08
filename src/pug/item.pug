@@ -1,0 +1,67 @@
+extends base.pug
+
+block main
+	.item
+		.item__inner.inner
+			.item__breadcrumbs.breadcrumbs
+				a(href='#').breadcrumbs__item Главная
+				a(href='#').breadcrumbs__item Влажные салфетки
+				a(href='#').breadcrumbs__item.current Салфетки для рук и лица
+			.item__description
+				.item__left
+					.item__slider.slider
+						.item__arrow.slider__nav <
+						.item__container.slider__container
+							.item__move.slider__inner
+								.item__slide.slider__slide
+									img.item__slider-img(src='images/baby.png')
+								.item__slide.slider__slide
+									img.item__slider-img(src='images/baby.png')
+								.item__slide.slider__slide
+									img.item__slider-img(src='images/baby.png')
+						.item__arrow.slider__nav >
+					.item__pagination.slider__pagination
+						.item__paginationItem.slider__paginationItem.active: img.item__pag-img(src='images/baby.png')
+						.item__paginationItem.slider__paginationItem: img.item__pag-img(src='images/baby.png')
+						.item__paginationItem.slider__paginationItem: img.item__pag-img(src='images/baby.png')
+				.item__right
+					.item__caption Салфетки для рук и лица
+					.item__price 3.00 грн/упаковка
+					.item__editional минимальный объем заказа:
+						span.item__editional_bold 100 упаковок
+					button.nav__button(activator='modalOrder') Заказать
+					ul.item__main-info
+						li.item__main-item Доставка "Новой Почтой" по Украине
+						li.item__main-item Бесплатная доставка курьером при заказе партии от ХХХХ шт.
+						li.item__main-item Партии до ХХХХ шт. изготавливаем за 1 день
+					.item__sub Описание
+					.item__text.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					.item__sub Хранение
+					.item__text.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		.item__another
+			.item__headline Вас также могут заинтересовать:
+			.item__another-container
+				a(href='#').item__another-block
+					img.item__another-bg(src='images/Elipse.png')
+					img.item__another-img(src='images/anti.png')
+					.item__another-name Салфетки гигиенические
+				a(href='#').item__another-block
+					img.item__another-bg(src='images/Elipse.png')
+					img.item__another-img(src='images/anti.png')
+					.item__another-name Салфетки гигиенические
+				a(href='#').item__another-block
+					img.item__another-bg(src='images/Elipse.png')
+					img.item__another-img(src='images/anti.png')
+					.item__another-name Салфетки гигиенические

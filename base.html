@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Welvart</title>
+    <meta charset="utf-8">
+    <meta name="keywords">
+    <meta name="description">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_-fZhgOgEznL6N2NGE4VySEsYiErRHEQ&amp;amp;callback=initMap" defer=""></script>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/main.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="modal" id="modalOrder">
+      <div class="modal__close-layer modalClose"></div>
+      <div class="modal__main-layer">
+        <div class="modal__body">
+          <div class="modal__head">
+            <div class="modal__name">Заказать товар</div>
+            <div class="modal__close modalClose"><i class="fa fa-close"></i></div>
+          </div>
+          <form class="modal__form">
+            <input class="modal__input" type="text" name="name" placeholder="Имя">
+            <input class="modal__input" type="text" name="email" placeholder="E-mail">
+            <input class="modal__input" type="text" name="Телефон" placeholder="Телефон">
+            <textarea class="modal__textarea" type="text" name="comment" placeholder="Комментарий"></textarea>
+            <input class="modal__submit" type="submit" value="Заказать">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalCall">
+      <div class="modal__close-layer modalClose"></div>
+      <div class="modal__main-layer">
+        <div class="modal__body">
+          <div class="modal__head">
+            <div class="modal__name">Заказать звонок</div>
+            <div class="modal__close modalClose"><i class="fa fa-close"></i></div>
+          </div>
+          <form class="modal__form">
+            <input class="modal__input" type="text" name="name" placeholder="Имя">
+            <input class="modal__input" type="text" name="Телефон" placeholder="Телефон">
+            <input class="modal__submit" type="submit" value="Перезвонить мне">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="mobile">
+      <div class="mobile__nav">
+        <div class="mobile__links"><a class="mobile__link" href="#">О Компании</a><a class="mobile__link" href="/catalog.html">Продукция</a><a class="mobile__link" href="/news.html">Новости</a><a class="mobile__link" href="/contacts.html">Контакты</a></div>
+      </div>
+      <div class="mobile__contact">
+        <div class="nav__contacts mobile__contacts">
+          <div class="mobile__text nav__text nav__text_mail">info@welvart.com</div>
+          <div class="mobile__text nav__text nav__text_phone">38 (044) 
+            <div class="nav__text_bold">221-48-38</div>
+          </div>
+        </div>
+        <button class="nav__button" activator="modalCall">Заказать звонок</button>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="nav__inner inner">
+        <div class="nav__nav"><a href="/"><img class="nav__logo" src="images/logo.png"></a>
+          <div class="nav__links"><a class="nav__link" href="#" activator="modalOrder">О Компании</a><a class="nav__link nav__link_parent" href="/catalog.html">Продукция</a>
+            <div class="nav__submenu"><a class="nav__sublink" href="#">Link1</a><a class="nav__sublink" href="#">Link2</a><a class="nav__sublink" href="#">Link3</a><a class="nav__sublink" href="#">Link4</a></div><a class="nav__link" href="/news.html">Новости</a><a class="nav__link" href="/contacts.html">Контакты</a>
+          </div>
+        </div>
+        <div class="nav__contact">
+          <div class="nav__contacts">
+            <div class="nav__text nav__text_mail">info@welvart.com</div>
+            <div class="nav__text nav__text_phone">38 (044) 
+              <div class="nav__text_bold">221-48-38</div>
+            </div>
+          </div>
+          <button class="nav__button" activator="modalCall">Заказать звонок</button>
+        </div>
+        <div class="nav__burger burger">
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+        </div>
+      </div>
+    </nav>
+    <footer class="footer">
+      <div class="footer__inner inner">
+        <div class="footer__column"><img class="footer__image" src="images/logo.png">
+          <div class="footer__copy">2017. Изготовление влажных салфеток</div>
+          <div class="footer__social"><a class="footer__social-icon" href="#"><img class="footer__social-image" src="images/vk.png"></a><a class="footer__social-icon" href="#"><img class="footer__social-image" src="images/fb.png"></a><a class="footer__social-icon" href="#"><img class="footer__social-image" src="images/twitter.png"></a></div>
+        </div>
+        <div class="footer__column"><a class="footer__link" href="#">О Компании</a><a class="footer__link" href="#">Продукция</a><a class="footer__link" href="#">Новости</a><a class="footer__link" href="#">Контакты</a></div>
+        <div class="footer__column">
+          <div class="footer__contact">
+            <div class="footer__icon"><img src="images/botphone.png"></div>
+            <div class="footer__info">
+              <div class="footer__contact-line">тел.: (044) 221-48-38</div>
+              <div class="footer__contact-line">моб.: (050) 065-34-15</div>
+            </div>
+          </div>
+          <div class="footer__contact">
+            <div class="footer__icon"><img src="images/botmail.png"></div>
+            <div class="footer__info">
+              <div class="footer__contact-line">info@welvart.com</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__column">
+          <div class="footer__contact">
+            <div class="footer__icon"><img src="images/botmarker.png"></div>
+            <div class="footer__info">
+              <div class="footer__contact-line">Украина, г. Киев,</div>
+              <div class="footer__contact-line">ул. ХХХХХХХ ХХХХ ХХ, ХХХ</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__column">
+          <button class="nav__button footer__button" activator="modalCall">Заказать звонок</button>
+          <div class="footer__devs">разработка:<a class="footer__devs-link" href="#">STEARLING.NET</a></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

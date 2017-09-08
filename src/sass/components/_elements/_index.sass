@@ -1,0 +1,107 @@
+.inner
+	width: 95%
+	max-width: 1280px
+	margin: 0 auto
+
+.triangle
+	position: relative
+	height: 560px
+	width: 560px
+	margin: -192px 0 0 -390px
+	&__line
+		background-color: #27333f
+		position: absolute
+		&:nth-child(1)
+			height: 540px
+			width: 5px
+			bottom: 0
+			left: 0
+		&:nth-child(2)
+			height: 5px
+			width: 540px
+			bottom: 0
+			left: 0
+		&:nth-child(3)
+			height: 5px
+			width: 760px
+			bottom: 270px
+			left: -110px
+			transform: rotate(45deg)
+
+.breadcrumbs
+	@include flex(row, flex-start, flex-start, wrap)
+	margin: 20px 0 40px
+	&__item
+		background-color: #e8ecee
+		color: #757c82
+		text-decoration: none
+		font-size: 13px
+		padding: 5px 10px
+		position: relative
+		margin-bottom: 10px
+		white-space: nowrap
+		&.current
+			color: #27333f
+		&::after
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			right: -10px
+			width: 0
+			height: 0
+			border:
+				top: 14px solid transparent
+				bottom: 14px solid transparent
+				left: 10px solid #e8ecee
+		&:not(:first-child)
+			padding: 5px 10px 5px 0
+			margin-left: 25px
+			&::before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				left: -20px
+				width: 0
+				height: 0
+				border:
+					top: 14px solid #e8ecee
+					bottom: 14px solid #e8ecee
+					right: 10px solid #e8ecee
+					left: 10px solid transparent
+
+.burger
+	width: 30px
+	height: 21px
+	@include flex(column, space-between, center, nowrap)
+	cursor: pointer
+	transition: all 500ms
+	&__line
+		width: 100%
+		height: 3px
+		background-color: #2d73ba
+		border-radius: 5px
+		transition: all 500ms
+	&.active
+		transform: rotate(135deg)
+		.burger__line
+			&:nth-child(1)
+				transform: translate(0, 9px) rotate(180deg)
+			&:nth-child(2)
+				// opacity: 0
+			&:nth-child(3)
+				transform: translate(0, -9px) rotate(90deg)
+
+
+@media screen and (max-width: 1280px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 768px)
+	@import '_768.sass'
+
+@media screen and (max-width: 320px)
+	@import '_320.sass'

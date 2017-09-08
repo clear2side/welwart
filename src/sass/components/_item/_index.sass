@@ -1,0 +1,139 @@
+.item
+	margin-top: 122px
+	&__left
+		width: 40%
+		margin-right: 10%
+	&__right
+		width: 50%
+	&__description
+		@include flex(row, space-between, flex-start, nowrap)
+		margin-bottom: 50px
+	&__slider
+		@include flex(row, space-between, center, nowrap)
+	&__container
+		width: 80%
+	&__slide
+		width: 100%
+		@include flex(row, center, center, nowrap)
+		display: inline-flex
+	&__slider-img
+		max-width: 100%
+		max-height: 100%
+		object-fit: cover
+	&__arrow
+		font-size: 40px
+		border: 2px solid #a2b4bd
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		padding-bottom: 10px
+		color: #a2b4bd
+		@include flex(row, center, center, nowrap)
+		z-index: 1
+	&__caption
+		font-family: $light
+		font-size: 35px
+		margin-top: 18px
+	&__price
+		color: #2d73ba
+		font-family: $medium
+		margin: 5px 0 10px
+		font-size: 23px
+	&__editional
+		font-size: 15px
+		font-family: $light
+		&_bold
+			font-family: $medium
+			font-size: 16px
+			margin-left: 5px
+	&__main-info
+		background-color: #f7f9fb
+		border: 1px solid #85dfe9
+		border-radius: 5px
+		padding: 20px 20px 20px 40px
+		margin-top: 40px
+	&__main-item
+		font-family: $light
+		&:not(:last-child)
+			margin-bottom: 10px
+	&__sub
+		font-family: $medium
+		text-transform: uppercase
+		font-size: 14px
+		margin: 20px 0 5px
+	&__text
+		font-family: $light
+	&__pagination
+		width: 100%
+		@include flex(row, center, center, nowrap)
+		margin-top: 40px
+	&__paginationItem
+		width: 20%
+		height: 120px
+		overflow: hidden
+		padding: 10px
+		border: 1px solid transparent
+		transition: all 500ms
+		margin: 0 5px
+		@include flex(row, center, center, nowrap)
+		&.active, &:hover
+			border: 1px solid #2d73ba
+	&__pag-img
+		max-width: 100%
+		max-height: 100%
+		object-fit: cover
+		margin: 0 auto
+	&__headline
+		font-size: 26px
+		text-transform: uppercase
+		font-family: $light
+		margin-bottom: 40px
+	&__another
+		background-color: #f2f2f2
+		padding: 100px 0
+		@include flex(column, center, center, nowrap)
+		&-container
+			@include flex(row, center, stretch, nowrap)
+		&-block
+			@include flex(column, flex-start, center, nowrap)
+			background-color: white
+			margin: 0 50px
+			padding: 10px 10px 50px
+			box-shadow: 0 0 10px rgba(black, 0.1)
+			width: 300px
+			position: relative
+			min-height: 300px
+			color: #27333f
+			text-decoration: none
+			&:hover
+				.item__another-img
+					transform: rotate(10deg)
+		&-bg
+			position: absolute
+			width: 215px
+			top: 40px
+			left: calc(50% - 107.5px)
+			z-index: 0
+		&-img, &-name
+			z-index: 1
+		&-name
+			font-family: $light
+			font-size: 20px
+			text-align: center
+		&-img, &-img + .item__another-name
+			margin-top: 70px
+		&-img
+			transition: all 500ms
+
+
+@media screen and (max-width: 1280px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 768px)
+	@import '_768.sass'
+
+@media screen and (max-width: 320px)
+	@import '_320.sass'

@@ -1,0 +1,50 @@
+extends base.pug
+
+block main
+	.catalog
+		.catalog__header
+			img.catalog__header-bg(src='images/sugarBack.png')
+			.catalog__header-text Порционная упаковка
+		.catalog__inner.inner
+			.catalog__top
+				.catalog__breadcrumbs.breadcrumbs
+					a(href='#').breadcrumbs__item Главная
+					a(href='#').breadcrumbs__item.current Порционная упаковка
+				.catalog__filter
+					.catalog__filter-desc Показывать:
+					a(href='#').catalog__filter-link.active Все
+					a(href='#').catalog__filter-link Только сыпучие
+					a(href='#').catalog__filter-link Только пастообразные
+					a(href='#').catalog__filter-link Средства гигиены
+			.catalog__main
+				.catalog__headline Для кого
+				.catalog__choose
+					a(href='#').catalog__choose-item.active Для всех
+					a(href='#').catalog__choose-item Кинотеатрам
+					a(href='#').catalog__choose-item Отелям и гостинницам
+					a(href='#').catalog__choose-item Салонам красоты, фитнес, SPA
+				.catalog__container
+					-for(var i = 0; i < 9; i++)
+						a(href='/item.html').catalog__item
+							img.catalog__image(src='images/Paket01.png')
+							.catalog__name Соль
+							.catalog__what Вес в упаковке
+							.catalog__weight 2гр
+	.partners.catalog__icons
+		.partners__inner.inner
+			.partners__line
+			.partners__line
+			.partners__line
+			.partners__line
+			.partners__line
+			.partners__caption Почему стоит выбрать нас
+			.partners__container
+				.partners__item
+					img.partners__image(src='images/Icon05.png')
+					.partners__name Наша продукция изготавливается на современном оборудовании
+				.partners__item
+					img.partners__image(src='images/icon06.png')
+					.partners__name На упаковках будет размещен ваш логотип или реклама
+				.partners__item
+					img.partners__image(src='images/icon07.png')
+					.partners__name Для производства используются только качественные материалы

@@ -1,0 +1,40 @@
+extends base.pug
+
+block main
+	.news
+		.news__inner.inner
+			.news__breadcrumbs.breadcrumbs
+				a(href='#').breadcrumbs__item Главная
+				a(href='#').breadcrumbs__item.current Новости
+			.news__list
+				-for(var i = 0; i < 10; i++)
+					.news__item
+						img.news__image(src='images/news.png')
+						.news__info
+							.news__caption Лучшее фасовочно-упаковочное оборудование в Украине
+							.news__text.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							.news__about
+								.news__date 09.07.2017
+								a(href='#').news__more Читать дальше
+				.news__pagination
+					ul.news__pagination--list
+						li.news__pagination--list_item
+							button.news__pagination-item.news__pagination--arr_left <
+						li.news__pagination--list_item
+							a(href='#').news__pagination-item.active 1
+						-for(i=2; i<=3; i++)
+							li.news__pagination--list_item
+								a(href='#').news__pagination-item= i
+						li.news__pagination--list_item
+							span.news__pagination-item ...
+						-for(i=22; i<=24; i++)
+							li.news__pagination--list_item
+								a(href='#').news__pagination-item= i
+						li.news__pagination--list_item
+							button.news__pagination-item.news__pagination--arr_right >

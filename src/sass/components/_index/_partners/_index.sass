@@ -1,0 +1,77 @@
+.partners
+	background-image: url('../images/BackCinema.png')
+	background-size: cover
+	background-position: center
+	margin-top: 120px
+	height: 810px
+	@include flex(row, center, center, nowrap)
+	&__inner
+		@include flex(column, center, center, nowrap)
+		position: relative
+		max-width: 1025px
+		height: 250px
+	&__line
+		background-color: white
+		position: absolute
+		&:nth-child(1)
+			top: 0
+			left: 0
+			width: 30%
+			height: 4px
+		&:nth-child(2)
+			top: 0
+			left: 0
+			height: 100%
+			width: 4px
+		&:nth-child(3)
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 4px
+		&:nth-child(4)
+			bottom: 0
+			right: 0
+			height: 100%
+			width: 4px
+		&:nth-child(5)
+			top: 0
+			right: 0
+			width: 30%
+			height: 4px
+	&__caption
+		margin: -50px 0 30px
+		color: white
+		text-transform: uppercase
+		font-family: $light
+		font-size: 25px
+		max-width: 40%
+		text-align: center
+	&__container
+		@include flex(row, space-around, center, nowrap)
+		width: 100%
+	&__item
+		@include flex(column, center, center, nowrap)
+	&__name
+		color: white
+		font-size: 18px
+		text-align: center
+		padding: 0 20px
+		margin-top: 20px
+
+.partners__item:hover
+	.partners__image
+		transform: scale(1.2);
+		transition: .15s ease-out
+		cursor: pointer
+
+@media screen and (max-width: 1280px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 768px)
+	@import '_768.sass'
+
+@media screen and (max-width: 320px)
+	@import '_320.sass'
